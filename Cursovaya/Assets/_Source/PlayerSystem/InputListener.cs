@@ -25,5 +25,13 @@ namespace PlayerSystem
             if (Input.GetKeyUp(KeyCode.A)) OnMoveKeyReleased?.Invoke(KeyCode.A);
             if (Input.GetKeyUp(KeyCode.D)) OnMoveKeyReleased?.Invoke(KeyCode.D);
         }
+
+        private void ReadHealth()
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                
+            }
+        }
     }
 }
