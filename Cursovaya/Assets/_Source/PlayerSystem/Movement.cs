@@ -2,23 +2,34 @@ using UnityEngine;
 
 namespace PlayerSystem
 {
-    public class PlayerMovement : MonoBehaviour
+    public class Movement : MonoBehaviour
     {
-        public float moveSpeed = 5f;
-    
+        public Player player;
         private Vector3 _moveDirection = Vector3.zero;
         private KeyCode _lastKeyPressed = KeyCode.None;
+        private float _currentSpeed;
 
         private void OnEnable()
         {
             InputListener.OnMoveKeyPressed += HandleKeyPress;
             InputListener.OnMoveKeyReleased += HandleKeyRelease;
+            InputListener.OnCrouch += Crouch;
+            InputListener.OnSprint += Sprint;
+            InputListener.OnStand += Stand;
         }
 
         private void OnDisable()
         {
             InputListener.OnMoveKeyPressed -= HandleKeyPress;
             InputListener.OnMoveKeyReleased -= HandleKeyRelease;
+            InputListener.OnCrouch -= Crouch;
+            InputListener.OnSprint -= Sprint;
+            InputListener.OnStand -= Stand;
+        }
+
+        private void Start()
+        {
+            _currentSpeed = player.speed;
         }
 
         private void Update()
@@ -59,7 +70,7 @@ namespace PlayerSystem
                     break;
             }
 
-            transform.position += _moveDirection * (moveSpeed * Time.deltaTime);
+            transform.position += _moveDirection * (_currentSpeed * Time.deltaTime);
         }
 
         private KeyCode GetLastPressedKey()
@@ -69,6 +80,24 @@ namespace PlayerSystem
             if (Input.GetKey(KeyCode.A)) return KeyCode.A;
             if (Input.GetKey(KeyCode.D)) return KeyCode.D;
             return KeyCode.None;
+        }
+
+        private void Crouch()
+        {
+            player.Crouch();
+            _currentSpeed = player.speed / 3;
+        }
+
+        private void Sprint()
+        {
+            player.Sprint();
+            _currentSpeed = player.speed * 1.8f;
+        }
+
+        private void Stand()
+        {
+            player.Stand();
+            _currentSpeed = player.speed;
         }
     }
 }

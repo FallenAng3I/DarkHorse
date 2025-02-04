@@ -7,10 +7,14 @@ namespace PlayerSystem
     {
         public static event Action<KeyCode> OnMoveKeyPressed;
         public static event Action<KeyCode> OnMoveKeyReleased;
+        public static event Action OnCrouch;
+        public static event Action OnSprint;
+        public static event Action OnStand;
 
         private void Update()
         {
             ReadMovement();
+            ReadActions();
         }
 
         private void ReadMovement()
@@ -26,12 +30,13 @@ namespace PlayerSystem
             if (Input.GetKeyUp(KeyCode.D)) OnMoveKeyReleased?.Invoke(KeyCode.D);
         }
 
-        private void ReadHealth()
+        private void ReadActions()
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                
-            }
+            if (Input.GetKeyDown(KeyCode.LeftControl)) OnCrouch?.Invoke();
+            if (Input.GetKeyUp(KeyCode.LeftControl)) OnStand?.Invoke();
+            
+            if (Input.GetKey(KeyCode.LeftShift)) OnSprint?.Invoke();
+            if (Input.GetKeyUp(KeyCode.LeftShift)) OnStand?.Invoke();
         }
     }
 }
