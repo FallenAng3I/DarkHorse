@@ -22,12 +22,13 @@ namespace BarsSystem
         public void UpdateHealthBar()
         {
             //healthBar.fillAmount = playerStats.currentHealth / playerStats.maxHealth;
-           // healthText.text = $"{playerStats.currentHealth}/{playerStats.maxHealth}";
+            //healthText.text = $"{playerStats.currentHealth}/{playerStats.maxHealth}";
         }
 
         public void UpdateStaminaBar()
         {
-           // staminaBar.fillAmount = playerStats.currentStamina / playerStats.maxStamina;
-           // staminaText.text = $"{playerStats.currentStamina}/{playerStats.maxStamina}";
+            //staminaBar.fillAmount = playerStats.currentStamina / playerStats.maxStamina;
+            //staminaText.text = $"{playerStats.currentStamina}/{playerStats.maxStamina}";
         }
     }
+}    
