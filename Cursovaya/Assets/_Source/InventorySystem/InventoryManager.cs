@@ -6,17 +6,29 @@ namespace InventorySystem
     public class InventoryManager : MonoBehaviour
     {
         public List<InventorySlot> inventorySlots = new List<InventorySlot>();
+        public List<Weapon> weapons = new List<Weapon>();
+        public Transform weaponHolder; // Точка, где появляется модель оружия
+        private int currentWeaponIndex = 0;
+        private GameObject currentWeaponModel;
+
+        private void Start()
+        {
+            if (weapons.Count > 0)
+            {
+                EquipWeapon(0); // При старте дать первое оружие
+            }
+        }
 
         private void Update()
         {
             ReadInput();
+            ScrollWeapons();
         }
 
         private void ReadInput()
         {
-            for (var index = 0; index < inventorySlots.Count; index++)
+            foreach (var slot in inventorySlots)
             {
-                var slot = inventorySlots[index];
                 if (Input.GetKeyDown(slot.assignedKey))
                 {
                     slot.Use();
@@ -24,30 +36,54 @@ namespace InventorySystem
             }
         }
 
-        private InventorySlot GetSlot(string slotName)
+        private void ScrollWeapons()
         {
-            return inventorySlots.Find(slot => slot.slotName == slotName);
-        }
-
-        public void AddItemToSlot(string slotName, int amount)
-        {
-            var slot = GetSlot(slotName);
-            if (slot != null)
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
-                bool added = slot.AddItem(amount);
-                Debug.Log(added
-                    ? $"Добавлено {amount} в {slotName}. Текущее количество: {slot.CurrentAmount}"
-                    : $"Слот {slotName} заполнен!");
+                ChangeWeapon(1);
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0)
+            {
+                ChangeWeapon(-1);
             }
         }
 
-        public void SetSlotAmount(string slotName, int amount)
+        private void ChangeWeapon(int direction)
         {
-            var slot = GetSlot(slotName);
-            if (slot != null)
+            if (weapons.Count == 0) return;
+
+            currentWeaponIndex += direction;
+            if (currentWeaponIndex >= weapons.Count) currentWeaponIndex = 0;
+            if (currentWeaponIndex < 0) currentWeaponIndex = weapons.Count - 1;
+
+            EquipWeapon(currentWeaponIndex);
+        }
+
+        private void EquipWeapon(int index)
+        {
+            if (weapons.Count == 0) return;
+
+            if (currentWeaponModel != null)
             {
-                slot.SetAmount(amount);
-                Debug.Log($"Количество в {slotName} установлено на {amount}");
+                Destroy(currentWeaponModel);
+            }
+
+            Weapon weapon = weapons[index];
+
+            if (weapon.weaponModel != null)
+            {
+                currentWeaponModel = Instantiate(weapon.weaponModel, weaponHolder.position, weaponHolder.rotation, weaponHolder);
+            }
+        
+            Debug.Log($"Выбрано оружие: {weapon.weaponName}");
+        }
+
+        public void AddWeapon(Weapon newWeapon)
+        {
+            weapons.Add(newWeapon);
+            if (weapons.Count == 1)
+            {
+                EquipWeapon(0);
             }
         }
     }

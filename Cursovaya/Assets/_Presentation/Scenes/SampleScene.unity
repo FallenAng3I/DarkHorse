@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 278991997}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.605, z: 0}
+  m_LocalPosition: {x: 0, y: 1.503, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.6, y: 3.6}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -244,6 +244,14 @@ MonoBehaviour:
     maxAmount: 4
     currentAmount: 4
     cooldown: 3
+  weapons:
+  - weaponName: Pistol
+    weaponModel: {fileID: 0}
+    fireRate: 1
+    damage: 1
+    maxAmmo: 10
+    currentAmmo: 10
+  weaponHolder: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.605, z: -10}
+  m_LocalPosition: {x: 0, y: 1.503, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,7 +830,7 @@ Transform:
   m_GameObject: {fileID: 1115147675}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.605, z: -10}
+  m_LocalPosition: {x: 0, y: 1.503, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
