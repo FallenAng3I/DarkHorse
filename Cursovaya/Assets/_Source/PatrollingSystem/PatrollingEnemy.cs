@@ -1,3 +1,4 @@
+using PlayerSystem;
 using UnityEngine;
 
 namespace PatrollingSystem
@@ -20,15 +21,15 @@ namespace PatrollingSystem
         private Vector3 _currentPatrolTarget;
         private bool _isChasing = false;
         private float _lastAttackTime;
-        private Damageable _playerDamageable;
+        private HealthView _playerDamageable;
 
-        void Start()
+        private void Start()
         {
             _startPosition = transform.position;
             _currentPatrolTarget = _startPosition + Vector3.right * patrolRange; // Начинаем патруль вправо
 
             //Поиск игрока
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            GameObject player = GameObject.FindGameObjectWithTag("Player"); // Сменить на 
             if (player == null)
             {
                 Debug.LogError("Не найден объект с тегом 'Player'!");
@@ -36,10 +37,10 @@ namespace PatrollingSystem
                 return;
             }
             _playerTransform = player.transform;
-            _playerDamageable = player.GetComponent<Damageable>();
+            _playerDamageable = player.GetComponent<HealthView>();
         }
 
-        void Update()
+        private void Update()
         {
             // Обнаружение игрока
             if (!_isChasing)
@@ -122,7 +123,7 @@ namespace PatrollingSystem
             }
         }
 
-        void OnDrawGizmosSelected()
+        private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, detectionRange);
