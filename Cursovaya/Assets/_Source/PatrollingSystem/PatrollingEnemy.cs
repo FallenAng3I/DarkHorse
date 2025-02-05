@@ -7,14 +7,17 @@ namespace PatrollingSystem
     {
         public float patrolSpeed = 3f;
         public float chaseSpeed = 6f;
+        
         public float patrolRange = 5f;
         public float detectionRange = 8f;
         public float attackRange = 2f;
+        
         public int attackDamage = 20;
         public float attackCooldown = 1f;
+
         public Transform attackPoint;
         public LayerMask playerLayers;
-        ///public Animator animator;///
+        //public Animator animator;
 
         private Transform _playerTransform;
         private Vector3 _startPosition;
@@ -109,7 +112,7 @@ namespace PatrollingSystem
 
         private void Attack()
         {
-            ///animator.SetTrigger("Attack");///
+            //animator.SetTrigger("Attack");
             _lastAttackTime = Time.time;
 
             // Проверка на наличие компонента Damageable перед попыткой нанесения урона

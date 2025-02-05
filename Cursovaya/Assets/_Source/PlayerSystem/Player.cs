@@ -1,16 +1,18 @@
+using System;
 using UnityEngine;
 
 namespace PlayerSystem
 {
-    [System.Serializable]
+    [Serializable]
     public class Player
     {
-        public float health = 100f;
+        public int health = 100;
         public float stamina = 100f;
         public float speed = 6f;
-    
+        
         public bool IsCrouching { get; private set; }
         public bool IsSprinting { get; private set; }
+        
         
         public void Crouch()
         {

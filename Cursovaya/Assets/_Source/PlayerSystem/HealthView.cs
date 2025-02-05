@@ -4,10 +4,12 @@ namespace PlayerSystem
 {
     public class HealthView : MonoBehaviour
     {
-        public int health = 100;
+        private Player player;
+        private int health;
 
         public void TakeDamage(int damage)
         {
+            health = player.health;
             health -= damage;
             Debug.Log($"{gameObject.name} получил {damage} урона. Осталось: {health} хп.");
             if (health <= 0)

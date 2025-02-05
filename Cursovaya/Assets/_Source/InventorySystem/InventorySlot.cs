@@ -11,10 +11,10 @@ namespace InventorySystem
         public int maxAmount;
         public float cooldown;
     
-        private int currentAmount;
-        private float lastUseTime;
+        private int _currentAmount;
+        private float _lastUseTime;
 
-        public int CurrentAmount => currentAmount;
+        public int CurrentAmount => _currentAmount;
 
         public InventorySlot(string name, KeyCode key, int max, float cd)
         {
@@ -22,22 +22,22 @@ namespace InventorySystem
             assignedKey = key;
             maxAmount = max;
             cooldown = cd;
-            currentAmount = 0;
-            lastUseTime = -cd; // Позволяет сразу использовать при старте
+            _currentAmount = 0;
+            _lastUseTime = -cd; // Позволяет сразу использовать при старте
         }
 
         public bool CanUse()
         {
-            return currentAmount > 0 && Time.time >= lastUseTime + cooldown;
+            return _currentAmount > 0 && Time.time >= _lastUseTime + cooldown;
         }
 
         public void Use()
         {
             if (CanUse())
             {
-                currentAmount--;
-                lastUseTime = Time.time;
-                Debug.Log($"{slotName} использован! Осталось: {currentAmount}");
+                _currentAmount--;
+                _lastUseTime = Time.time;
+                Debug.Log($"{slotName} использован! Осталось: {_currentAmount}");
             }
             else
             {
@@ -47,9 +47,9 @@ namespace InventorySystem
 
         public bool AddItem(int amount)
         {
-            if (currentAmount < maxAmount)
+            if (_currentAmount < maxAmount)
             {
-                currentAmount = Mathf.Clamp(currentAmount + amount, 0, maxAmount);
+                _currentAmount = Mathf.Clamp(_currentAmount + amount, 0, maxAmount);
                 return true;
             }
             return false;
