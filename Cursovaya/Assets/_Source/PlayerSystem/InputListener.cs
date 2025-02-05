@@ -10,11 +10,13 @@ namespace PlayerSystem
         public static event Action OnCrouch;
         public static event Action OnSprint;
         public static event Action OnStand;
+        public static event Action OnAttack;
 
         private void Update()
         {
             ReadMovement();
             ReadActions();
+            ReadAttack();
         }
 
         private void ReadMovement()
@@ -28,6 +30,14 @@ namespace PlayerSystem
             if (Input.GetKeyUp(KeyCode.S)) OnMoveKeyReleased?.Invoke(KeyCode.S);
             if (Input.GetKeyUp(KeyCode.A)) OnMoveKeyReleased?.Invoke(KeyCode.A);
             if (Input.GetKeyUp(KeyCode.D)) OnMoveKeyReleased?.Invoke(KeyCode.D);
+        }
+
+        private void ReadAttack()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                OnAttack?.Invoke();
+            }
         }
 
         private void ReadActions()
