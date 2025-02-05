@@ -24,7 +24,7 @@ namespace PatrollingSystem
         private float _lastAttackTime;
         private float _timeSinceLastAttack = 0f;
         private bool _isWaitingAfterAttack = false;
-        private Damageable _playerDamageable;
+        //private Damageable _playerDamageable;
 
         void Start()
         {
@@ -40,7 +40,7 @@ namespace PatrollingSystem
                 return;
             }
             _playerTransform = player.transform;
-            _playerDamageable = player.GetComponent<Damageable>();
+            //_playerDamageable = player.GetComponent<Damageable>();
         }
 
         void Update()
@@ -133,7 +133,7 @@ namespace PatrollingSystem
         {
             ///animator.SetTrigger("Attack");///
             _lastAttackTime = Time.time;
-
+            /*
             // Проверка на наличие компонента Damageable перед попыткой нанесения урона
             if (_playerDamageable != null)
             {
@@ -143,6 +143,7 @@ namespace PatrollingSystem
             {
                 Debug.LogWarning("Компонент Damageable не найден на игроке!");
             }
+            */
         }
 
         void OnDrawGizmosSelected()
