@@ -1,4 +1,4 @@
-using PlayerSystem;
+using PatrollingSystem;
 using UnityEngine;
 
 namespace PatrollingSystem
@@ -12,24 +12,27 @@ namespace PatrollingSystem
         public float attackRange = 2f;
         public int attackDamage = 20;
         public float attackCooldown = 1f;
+        public float attackWaitTime = 2f; // Время ожидания после атаки в секундах
         public Transform attackPoint;
         public LayerMask playerLayers;
-        ///public Animator animator;///
+        public Animator animator;
 
         private Transform _playerTransform;
         private Vector3 _startPosition;
         private Vector3 _currentPatrolTarget;
         private bool _isChasing = false;
         private float _lastAttackTime;
-        private HealthView _playerDamageable;
+        private float _timeSinceLastAttack = 0f;
+        private bool _isWaitingAfterAttack = false;
+        private Damageable _playerDamageable;
 
-        private void Start()
+        void Start()
         {
             _startPosition = transform.position;
-            _currentPatrolTarget = _startPosition + Vector3.right * patrolRange; // Начинаем патруль вправо
+            _currentPatrolTarget = _startPosition + Vector3.right * patrolRange;
 
             //Поиск игрока
-            GameObject player = GameObject.FindGameObjectWithTag("Player"); // Сменить на 
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player == null)
             {
                 Debug.LogError("Не найден объект с тегом 'Player'!");
@@ -37,10 +40,10 @@ namespace PatrollingSystem
                 return;
             }
             _playerTransform = player.transform;
-            _playerDamageable = player.GetComponent<HealthView>();
+            _playerDamageable = player.GetComponent<Damageable>();
         }
 
-        private void Update()
+        void Update()
         {
             // Обнаружение игрока
             if (!_isChasing)
@@ -52,11 +55,8 @@ namespace PatrollingSystem
             if (!_isChasing)
                 Patrol();
             else
-                Chase();
+                ManageChaseAttackState();
 
-            // Выполнения атаки
-            if (_isChasing)
-                TryAttack();
         }
 
         private void CheckForPlayer()
@@ -65,6 +65,7 @@ namespace PatrollingSystem
             if (Vector3.Distance(transform.position, _playerTransform.position) <= detectionRange)
             {
                 _isChasing = true;
+                _isWaitingAfterAttack = false; // Важно убедиться, что враг начинает преследование, а не стоит
             }
         }
 
@@ -84,26 +85,47 @@ namespace PatrollingSystem
             }
         }
 
-        private void Chase()
+        private void ManageChaseAttackState()
         {
-            transform.position = Vector3.MoveTowards(transform.position, _playerTransform.position, chaseSpeed * Time.deltaTime);
-
-            // Если игрок вышел из радиуса преследования, возвращаем патрулирование
-            if (Vector3.Distance(transform.position, _playerTransform.position) > detectionRange)
+            if (_isWaitingAfterAttack)
             {
-                _isChasing = false;
+                _timeSinceLastAttack += Time.deltaTime;
+                if (_timeSinceLastAttack >= attackWaitTime)
+                {
+                    _isWaitingAfterAttack = false;
+                    _timeSinceLastAttack = 0;
+                }
+                else
+                {
+                    // Во время ожидания не двигаемся
+                    return;
+                }
             }
+
+            ChaseAndAttack();
         }
 
-        private void TryAttack()
+        private void ChaseAndAttack()
         {
+            // Двигаемся к игроку
+            transform.position = Vector3.MoveTowards(transform.position, _playerTransform.position, chaseSpeed * Time.deltaTime);
+
             // Если игрок в радиусе атаки
             if (Vector3.Distance(transform.position, _playerTransform.position) <= attackRange)
             {
                 if (Time.time - _lastAttackTime >= attackCooldown)
                 {
                     Attack();
+                    _isWaitingAfterAttack = true;
+                    _timeSinceLastAttack = 0; // Начинаем отсчет времени ожидания после атаки
                 }
+            }
+
+            // Если игрок вышел из радиуса преследования, возвращаем патрулирование
+            if (Vector3.Distance(transform.position, _playerTransform.position) > detectionRange)
+            {
+                _isChasing = false;
+                _isWaitingAfterAttack = false;
             }
         }
 
@@ -123,7 +145,7 @@ namespace PatrollingSystem
             }
         }
 
-        private void OnDrawGizmosSelected()
+        void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, detectionRange);
@@ -132,4 +154,5 @@ namespace PatrollingSystem
             Gizmos.DrawWireSphere(transform.position, attackRange);
         }
     }
+
 }
