@@ -1,3 +1,4 @@
+using PlayerSystem;
 using UnityEngine;
 
 namespace WeaponSystem
@@ -19,15 +20,10 @@ namespace WeaponSystem
 
         public void Attack()
         {
-            if (!canAttack) return;
-
-            canAttack = false;
-            Debug.Log("Топор ударил по области!");
-            
-            //Movement.Instance.StopForSeconds(1f);
-            
-            Invoke(nameof(ResetAttack), attackCooldown);
+            Debug.Log("Топор атакует!");
+            // Здесь твоя логика атаки
         }
+
 
         private void ResetAttack()
         {

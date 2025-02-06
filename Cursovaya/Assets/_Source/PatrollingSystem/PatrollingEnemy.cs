@@ -1,4 +1,4 @@
-using PatrollingSystem;
+using PlayerSystem;
 using UnityEngine;
 
 namespace PatrollingSystem
@@ -24,9 +24,9 @@ namespace PatrollingSystem
         private float _lastAttackTime;
         private float _timeSinceLastAttack = 0f;
         private bool _isWaitingAfterAttack = false;
-        //private Damageable _playerDamageable;
+        private Player _player;
 
-        void Start()
+        private void Awake()
         {
             _startPosition = transform.position;
             _currentPatrolTarget = _startPosition + Vector3.right * patrolRange;
@@ -40,10 +40,10 @@ namespace PatrollingSystem
                 return;
             }
             _playerTransform = player.transform;
-            //_playerDamageable = player.GetComponent<Damageable>();
+            _player = player.GetComponent<Player>();
         }
 
-        void Update()
+        private void Update()
         {
             // Обнаружение игрока
             if (!_isChasing)
@@ -56,7 +56,6 @@ namespace PatrollingSystem
                 Patrol();
             else
                 ManageChaseAttackState();
-
         }
 
         private void CheckForPlayer()
@@ -109,7 +108,7 @@ namespace PatrollingSystem
         {
             // Двигаемся к игроку
             transform.position = Vector3.MoveTowards(transform.position, _playerTransform.position, chaseSpeed * Time.deltaTime);
-
+            
             // Если игрок в радиусе атаки
             if (Vector3.Distance(transform.position, _playerTransform.position) <= attackRange)
             {
@@ -131,22 +130,21 @@ namespace PatrollingSystem
 
         private void Attack()
         {
-            ///animator.SetTrigger("Attack");///
+            //animator.SetTrigger("Attack");
             _lastAttackTime = Time.time;
-            /*
+            
             // Проверка на наличие компонента Damageable перед попыткой нанесения урона
-            if (_playerDamageable != null)
+            if (_player != null)
             {
-                _playerDamageable.TakeDamage(attackDamage);
+                _player.TakeDamage(attackDamage);
             }
             else
             {
                 Debug.LogWarning("Компонент Damageable не найден на игроке!");
             }
-            */
         }
 
-        void OnDrawGizmosSelected()
+        private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, detectionRange);
@@ -155,5 +153,4 @@ namespace PatrollingSystem
             Gizmos.DrawWireSphere(transform.position, attackRange);
         }
     }
-
 }
