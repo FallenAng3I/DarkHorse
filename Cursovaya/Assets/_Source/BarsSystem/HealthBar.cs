@@ -1,34 +1,43 @@
-using PlayerSystem;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-namespace BarsSystem
+
+public class HealthBar : MonoBehaviour
 {
-    public class HealthBar : MonoBehaviour
+    public Image healthBarImage; // Ссылка на Image для полоски здоровья
+    public TMP_Text healthText;      // Ссылка на Text для отображения цифр
+
+    private float maxHealth = 100f; // Максимальное здоровье
+    private float currentHealth;    // Текущее здоровье
+
+    void Start()
     {
-        public Image healthBar;
-        public Image staminaBar;
-        public Text healthText;
-        public Text staminaText;
+        currentHealth = maxHealth;
+        UpdateHealthBar();
+    }
 
-        private Player playerStats;
+    // Метод для изменения здоровья
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        UpdateHealthBar();
+    }
 
-        public void Initialize(Player stats)
+    // Метод для обновления UI
+    private void UpdateHealthBar()
+    {
+        // Обновляем заполнение полоски здоровья
+        healthBarImage.fillAmount = currentHealth / maxHealth;
+
+        // Обновляем текст с текущим здоровьем
+        healthText.text = $"{currentHealth}/{maxHealth}";      
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerStats = stats;
-            UpdateHealthBar();
-            UpdateStaminaBar();
-        }
-
-        public void UpdateHealthBar()
-        {
-            //healthBar.fillAmount = playerStats.currentHealth / playerStats.maxHealth;
-            //healthText.text = $"{playerStats.currentHealth}/{playerStats.maxHealth}";
-        }
-
-        public void UpdateStaminaBar()
-        {
-            //staminaBar.fillAmount = playerStats.currentStamina / playerStats.maxStamina;
-            //staminaText.text = $"{playerStats.currentStamina}/{playerStats.maxStamina}";
+            TakeDamage(10);
         }
     }
-}    
+}
