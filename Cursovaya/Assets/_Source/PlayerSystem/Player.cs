@@ -1,23 +1,37 @@
-using System;
 using UnityEngine;
 
 namespace PlayerSystem
 {
-    [Serializable]
-    public class Player
+    public class Player : MonoBehaviour
     {
-        public int health = 100;
+        [SerializeField] private int maxHealth = 15;
+        [SerializeField] private int health;
         public float stamina = 100f;
         public float speed = 6f;
         
         public bool IsCrouching { get; private set; }
         public bool IsSprinting { get; private set; }
-        
-        
+
+        private void Awake()
+        {
+            health = maxHealth;
+        }
+
         public void Crouch()
         {
             IsCrouching = true;
             IsSprinting = false;
+        }
+        
+        public void TakeDamage(int damage)
+        {
+            health -= damage;
+            //health = Mathf.Clamp(health, 0, maxHealth);
+            
+            if (health <= 0)
+            {
+                Die();
+            }
         }
 
         public void Sprint()
@@ -33,6 +47,12 @@ namespace PlayerSystem
         {
             IsCrouching = false;
             IsSprinting = false;
+        }
+        
+        private void Die()
+        {
+            Debug.Log("Player died");
+            Destroy(gameObject);
         }
     }
 }
