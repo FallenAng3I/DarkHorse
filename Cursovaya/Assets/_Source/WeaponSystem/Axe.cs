@@ -1,4 +1,3 @@
-using PlayerSystem;
 using UnityEngine;
 
 namespace WeaponSystem
@@ -6,7 +5,7 @@ namespace WeaponSystem
     public class Axe : MonoBehaviour, IWeapon
     {
         public float attackCooldown = 1.5f;
-        private bool canAttack = true;
+        //private bool canAttack = true;
 
         private void OnEnable()
         {
@@ -21,13 +20,6 @@ namespace WeaponSystem
         public void Attack()
         {
             Debug.Log("Топор атакует!");
-            // Здесь твоя логика атаки
-        }
-
-
-        private void ResetAttack()
-        {
-            canAttack = true;
         }
     }
 }

@@ -3401,6 +3401,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8514441836379640150, guid: b37f1afba939312418bc650ce80f7bc9,
     type: 3}
   shootPoint: {fileID: 858668784}
+  ammo: 8
+  damage: 25
   bulletCount: 4
   bulletSpeed: 8
   spreadAngle: 10
@@ -3708,7 +3710,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.950012, y: -8.503387}
+  m_AnchoredPosition: {x: -5.949951, y: -8.503418}
   m_SizeDelta: {x: 11.9, y: 17.0068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1315986424 stripped
@@ -4512,6 +4514,7 @@ MonoBehaviour:
     type: 3}
   shootPoint: {fileID: 126445640}
   ammo: 6
+  damage: 25
   bulletSpeed: 10
 --- !u!212 &1668280585
 SpriteRenderer:

@@ -3,5 +3,6 @@
   <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
     <file url="file://$PROJECT_DIR$/Assets/_Source/PatrollingSystem/Damageable.cs" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Assets/_Source/PatrollingSystem/PatrollingEnemy.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/_Source/PatrollingSystem/Test.cs" charset="windows-1251" />
   </component>
 </project>

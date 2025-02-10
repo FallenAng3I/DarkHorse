@@ -10,7 +10,7 @@ namespace PlayerSystem
         public static event Action OnCrouch;
         public static event Action OnSprint;
         public static event Action OnStand;
-        public static event Action OnAttack;
+        public static event Action OnAttack = delegate { };
 
         private void Update()
         {
