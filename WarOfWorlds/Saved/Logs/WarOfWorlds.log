@@ -2531,3 +2531,128 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.03.06-19.57.08:925][271]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2025.03.06-19.57.08:925][271]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.03.06-19.57.08:925][271]AssetCheck: /Game/_Presentation/Levels/DeveloperRoom Проверка ресурса
+[2025.03.06-19.57.52:299][647]LogUObjectHash: Compacting FUObjectHashTables data took   0.57ms
+[2025.03.06-19.58.00:414][647]LogSlate: Window 'Сохранять контент' being destroyed
+[2025.03.06-19.58.00:423][647]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.03.06-19.58.00:479][647]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/_Presentation/Textures/AAAAAAAAA_Mat] ([1] browsable assets)...
+[2025.03.06-19.58.00:479][647]OBJ SavePackage: Finished generating thumbnails for package [/Game/_Presentation/Textures/AAAAAAAAA_Mat]
+[2025.03.06-19.58.00:479][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/_Presentation/Textures/AAAAAAAAA_Mat" FILE="D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Textures/AAAAAAAAA_Mat.uasset" SILENT=true
+[2025.03.06-19.58.00:480][647]LogSavePackage: Moving output files for package: /Game/_Presentation/Textures/AAAAAAAAA_Mat
+[2025.03.06-19.58.00:480][647]LogSavePackage: Moving 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Saved/AAAAAAAAA_Mat8E4594A44F699787EE9AD3A22AD41C56.tmp' to 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Textures/AAAAAAAAA_Mat.uasset'
+[2025.03.06-19.58.00:481][647]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/_Presentation/Source/Character/Input/IA_Look] ([1] browsable assets)...
+[2025.03.06-19.58.00:481][647]OBJ SavePackage: Finished generating thumbnails for package [/Game/_Presentation/Source/Character/Input/IA_Look]
+[2025.03.06-19.58.00:497][647]LogSavePackage: Moving output files for package: /Game/_Presentation/Source/Character/Input/IA_Look
+[2025.03.06-19.58.00:498][647]LogSavePackage: Moving 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Saved/IA_Look876266F641D50E83AA7AC99DB0DD7704.tmp' to 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Source/Character/Input/IA_Look.uasset'
+[2025.03.06-19.58.00:498][647]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/_Presentation/Textures/Material] ([1] browsable assets)...
+[2025.03.06-19.58.00:498][647]OBJ SavePackage: Finished generating thumbnails for package [/Game/_Presentation/Textures/Material]
+[2025.03.06-19.58.00:498][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/_Presentation/Textures/Material" FILE="D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Textures/Material.uasset" SILENT=true
+[2025.03.06-19.58.00:500][647]LogSavePackage: Moving output files for package: /Game/_Presentation/Textures/Material
+[2025.03.06-19.58.00:500][647]LogSavePackage: Moving 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Saved/Material5DF8A1854E481E641148B9820BAA278F.tmp' to 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Textures/Material.uasset'
+[2025.03.06-19.58.00:501][647]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyGameGamemode] ([2] browsable assets)...
+[2025.03.06-19.58.00:501][647]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyGameGamemode]
+[2025.03.06-19.58.00:501][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyGameGamemode" FILE="D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/MyGameGamemode.uasset" SILENT=true
+[2025.03.06-19.58.00:503][647]LogSavePackage: Moving output files for package: /Game/MyGameGamemode
+[2025.03.06-19.58.00:503][647]LogSavePackage: Moving 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Saved/MyGameGamemodeFB1D9A664B4B12402E70E5929C6B0AAB.tmp' to 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/MyGameGamemode.uasset'
+[2025.03.06-19.58.00:506][647]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/_Presentation/Textures/shelf_mesh] ([1] browsable assets)...
+[2025.03.06-19.58.00:506][647]OBJ SavePackage: Finished generating thumbnails for package [/Game/_Presentation/Textures/shelf_mesh]
+[2025.03.06-19.58.00:506][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/_Presentation/Textures/shelf_mesh" FILE="D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Textures/shelf_mesh.uasset" SILENT=true
+[2025.03.06-19.58.00:508][647]LogSavePackage: Moving output files for package: /Game/_Presentation/Textures/shelf_mesh
+[2025.03.06-19.58.00:508][647]LogSavePackage: Moving 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Saved/shelf_meshF5E6D828448903FCB40ECCA603E46301.tmp' to 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Textures/shelf_mesh.uasset'
+[2025.03.06-19.58.00:509][647]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/_Presentation/Textures/TD_Checker] ([1] browsable assets)...
+[2025.03.06-19.58.00:509][647]OBJ SavePackage: Finished generating thumbnails for package [/Game/_Presentation/Textures/TD_Checker]
+[2025.03.06-19.58.00:509][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/_Presentation/Textures/TD_Checker" FILE="D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Textures/TD_Checker.uasset" SILENT=true
+[2025.03.06-19.58.00:511][647]LogSavePackage: Moving output files for package: /Game/_Presentation/Textures/TD_Checker
+[2025.03.06-19.58.00:511][647]LogSavePackage: Moving 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Saved/TD_Checker6EFF334243030BBCB5C3D0900D04C9B5.tmp' to 'D:/блендер штучки/proekt/DarkHorse/WarOfWorlds/Content/_Presentation/Textures/TD_Checker.uasset'
+[2025.03.06-19.58.00:520][647]LogFileHelpers: InternalPromptForCheckoutAndSave took 96.859 ms (total: 1.16 sec)
+[2025.03.06-19.58.00:608][647]LogStall: Shutdown...
+[2025.03.06-19.58.00:608][647]LogStall: Shutdown complete.
+[2025.03.06-19.58.00:671][647]LogSlate: Window 'WarOfWorlds — Unreal Editor' being destroyed
+[2025.03.06-19.58.00:795][647]LogContentValidation: Display: Starting to validate 6 assets
+[2025.03.06-19.58.00:795][647]LogContentValidation: Enabled validators:
+[2025.03.06-19.58.00:795][647]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.03.06-19.58.00:795][647]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.03.06-19.58.00:795][647]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.03.06-19.58.00:795][647]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.03.06-19.58.00:795][647]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.03.06-19.58.00:795][647]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.03.06-19.58.00:795][647]AssetCheck: /Game/_Presentation/Textures/AAAAAAAAA_Mat Проверка ресурса
+[2025.03.06-19.58.00:795][647]AssetCheck: /Game/_Presentation/Source/Character/Input/IA_Look Проверка ресурса
+[2025.03.06-19.58.00:795][647]AssetCheck: /Game/_Presentation/Textures/Material Проверка ресурса
+[2025.03.06-19.58.00:795][647]AssetCheck: /Game/MyGameGamemode Проверка ресурса
+[2025.03.06-19.58.00:796][647]AssetCheck: /Game/_Presentation/Textures/shelf_mesh Проверка ресурса
+[2025.03.06-19.58.00:796][647]AssetCheck: /Game/_Presentation/Textures/TD_Checker Проверка ресурса
+[2025.03.06-19.58.00:810][647]Cmd: QUIT_EDITOR
+[2025.03.06-19.58.00:810][647]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2025.03.06-19.58.00:818][648]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2025.03.06-19.58.00:819][648]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2025.03.06-19.58.00:819][648]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2025.03.06-19.58.00:820][648]LogWorld: UWorld::CleanupWorld for DeveloperRoom, bSessionEnded=true, bCleanupResources=true
+[2025.03.06-19.58.00:820][648]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.06-19.58.00:834][648]LogStylusInput: Shutting down StylusInput subsystem.
+[2025.03.06-19.58.00:835][648]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2025.03.06-19.58.00:839][648]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2025.03.06-19.58.00:839][648]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.06-19.58.00:842][648]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2025.03.06-19.58.00:842][648]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.06-19.58.00:846][648]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2025.03.06-19.58.00:846][648]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.06-19.58.00:849][648]LogStudioTelemetry: Ended StudioTelemetry Session
+[2025.03.06-19.58.00:852][648]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroying ET Analytics provider
+[2025.03.06-19.58.00:852][648]LogAnalytics: Display: [UEEditor.Rocket.Release] Ended ET Analytics provider session
+[2025.03.06-19.58.00:852][648]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroyed ET Analytics provider
+[2025.03.06-19.58.01:168][648]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2025.03.06-19.58.01:168][648]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2025.03.06-19.58.01:168][648]LogAudio: Display: Audio Device unregistered from world 'DeveloperRoom'.
+[2025.03.06-19.58.01:168][648]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2025.03.06-19.58.01:168][648]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2025.03.06-19.58.01:170][648]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2025.03.06-19.58.01:175][648]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2025.03.06-19.58.01:175][648]LogAudio: Display: Audio Device Manager Shutdown
+[2025.03.06-19.58.01:175][648]LogWindowsTextInputMethodSystem: Activated input method: Английский (США) - (Keyboard).
+[2025.03.06-19.58.01:177][648]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2025.03.06-19.58.01:177][648]LogExit: Preparing to exit.
+[2025.03.06-19.58.01:204][648]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_null_above_selected_PY.add_null_above_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_all' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_x' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_y' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_z' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:216][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_scale' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_name_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/set_bone_reference_pose_PY.set_bone_reference_pose' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/ControlRigWorkflows/workflow_fbik_import_ik_rig_PY.import_ik_rig_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:217][648]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.ControlOutputFormat' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.03.06-19.58.01:868][648]LogEditorDataStorage: Deinitializing
+[2025.03.06-19.58.01:962][648]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2025.03.06-19.58.01:973][648]LogExit: Editor shut down
+[2025.03.06-19.58.01:974][648]LogExit: Transaction tracking system shut down
+[2025.03.06-19.58.02:081][648]LogExit: Object subsystem successfully closed.
+[2025.03.06-19.58.02:094][648]LogShaderCompilers: Display: Shaders left to compile 0
+[2025.03.06-19.58.02:794][648]LogMemoryProfiler: Shutdown
+[2025.03.06-19.58.02:794][648]LogNetworkingProfiler: Shutdown
+[2025.03.06-19.58.02:794][648]LoadingProfiler: Shutdown
+[2025.03.06-19.58.02:794][648]LogTimingProfiler: Shutdown
+[2025.03.06-19.58.03:915][648]LogChaosDD: Chaos Debug Draw Shutdown
+[2025.03.06-19.58.03:939][648]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2025.03.06-19.58.03:939][648]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B20932044-49D1-CDBC-10BD-949CFDD1ED80%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.5.3-39772772%2B%2B%2BUE5%2BRelease-5.5&UserID=5c2a51144025160b3cd94cb8a7b0c03f%7Cc2d72dd07d5f4cb3be2f176bb9d28a21%7C423cad2d-02e0-464d-801b-29bf38f1d440&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2025.03.06-19.58.04:491][648]LogEOSSDK: FEOSSDKManager::Shutdown EOS_Shutdown Result=[EOS_Success]
+[2025.03.06-19.58.04:497][648]LogStudioTelemetry: Display: Shutdown StudioTelemetry Module
+[2025.03.06-19.58.04:497][648]LogNFORDenoise: NFORDenoise function shutting down
+[2025.03.06-19.58.04:497][648]RenderDocPlugin: plugin has been unloaded.
+[2025.03.06-19.58.04:500][648]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+[2025.03.06-19.58.04:500][648]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+[2025.03.06-19.58.04:500][648]LogPakFile: Destroying PakPlatformFile
+[2025.03.06-19.58.04:770][648]LogD3D12RHI: ~FD3D12DynamicRHI
+[2025.03.06-19.58.04:829][648]LogExit: Exiting.
+[2025.03.06-19.58.04:869][648]Log file closed, 03/06/25 22:58:04
